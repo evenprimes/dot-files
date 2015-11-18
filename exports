@@ -1,0 +1,4 @@
+export EDITOR='mate -wl1'
+export GIT_EDITOR='vim'
+
+export DIR_COLORS=~/.dircolors

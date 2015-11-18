@@ -1,0 +1,18 @@
+.gz  01;31
+.bz2 01;31
+.deb 07;31
+.rpm 01;31
+.jar 01;31
+
+# audio formats
+.ogg 01;35
+.mp3 01;35
+.wav 01;35
+
+# programming languages
+.c 00;32
+.cc 00;32
+.cpp 00;32
+.h 00;33
+.py 00;32
+.pyc 00;33
