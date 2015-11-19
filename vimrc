@@ -69,12 +69,6 @@ highlight SpecialKey guifg=#4a4a59
 " Set the color scheme
 colorscheme torte
 
-" When folding, have a 3 column wide folding space.
-set foldcolumn=6
-
-" Fold based on indent.
-set foldmethod=indent
-
 " Set font in windows. This is probably not very portable since the InputMono
 " font is new and only available as a download.  Still, it's a very nice font
 " so use it when possible.
