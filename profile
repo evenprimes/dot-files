@@ -1,5 +1,5 @@
 
-export PATH=$PATH:~/scripts
+export PATH=$PATH:~/Applications/bin
 
 for file in ~/.{bash_prompt,exports,aliases,git-completion.bash,git-prompt,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -22,3 +22,5 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+# Setup virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh

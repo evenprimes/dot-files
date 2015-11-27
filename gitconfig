@@ -1,7 +1,7 @@
 [user]
 	name = Chris Cioffi
 	email = chris@evenprimes.com
-	
+
 [alias]
 	co = checkout
 	br = branch
@@ -18,16 +18,16 @@
 	lasttag = describe --tags --abbrev=0
 	lt = describe --tags --abbrev=0
 	lg = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr) %C(blue)<%an>%C(reset)' --abbrev-commit --date=relative
-	
+
 	# Clean up branches already merged into master
 	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-	
-	# git save or git wip. The first one adds all changes including untracked 
+
+	# git save or git wip. The first one adds all changes including untracked
 	# files and creates a commit. The second one only commits tracked changes.
 	save = !git add -A && git commit -m 'SAVEPOINT'
 	wip = !git add -u && git commit -m "WIP"
-	
-	
+
+
 [color]
 	branch = auto
 	diff = auto
@@ -52,11 +52,12 @@
 	untracked = cyan
 [core]
 	excludesfile = /Users/chris/.gitignore_global
+	editor = subl -n -w
 [push]
 	default = simple
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
