@@ -1,4 +1,3 @@
-
 alias grep='grep --color=auto'
 
 alias ll='gls --color=auto -la'
@@ -29,4 +28,3 @@ alias ax='chmod a+x'
 
 # copy the working directory path
 alias cpwd='pwd|tr -d "\n"|pbcopy'
-

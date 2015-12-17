@@ -1,4 +1,3 @@
-
 export PATH=$PATH:~/Applications/bin
 
 for file in ~/.{bash_prompt,exports,aliases,git-completion.bash,git-prompt,functions}; do
