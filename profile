@@ -1,6 +1,6 @@
 export PATH=$PATH:~/Applications/bin
 
-for file in ~/.{bash_prompt,exports,aliases,git-completion.bash,git-prompt,functions}; do
+for file in ~/.{bash_prompt.sh,exports.sh,aliases.sh,git-completion.bash,git-prompt,functions.sh}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file
