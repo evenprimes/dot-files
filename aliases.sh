@@ -1,8 +1,8 @@
 alias grep='grep --color=auto'
 
-alias ll='gls --color=auto -la'
-alias l.='gls --color=auto -d .*'
-alias ls='gls -pF --color'
+alias ll='gls --color=auto -la --group-directories-first'
+alias l.='gls --color=auto -d --group-directories-first .*'
+alias ls='gls -pF --color=auto --group-directories-first'
 alias ..='cd ..'
 
 alias gs='git status '

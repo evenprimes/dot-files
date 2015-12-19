@@ -6,7 +6,8 @@ dir=$(pwd)                     # dotfiles directory
 files="aliases.sh bash_prompt.sh dircolors exports.sh functions.sh git-prompt git-completion.bash gitconfig gitignore_global profile vimrc"
 
 ##########
-
+# Update dircolors
+gdircolors dircolors.moonshine > dircolors
 # move any existing dotfiles in homedir to dotfiles_old directory, then
 # create symlinks from the homedir to any files in the ~/dotfiles
 # directory specified in $files
