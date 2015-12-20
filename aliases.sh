@@ -13,8 +13,6 @@ alias gd='git diff'
 alias gca='git commit -a'
 alias glog='git log'
 
-alias p3=python3
-
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
