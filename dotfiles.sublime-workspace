@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"c_",
+				"c_red"
+			],
+			[
 				"if",
 				"ifmain	if __name__ == '__main__'"
 			]
@@ -11,38 +15,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "vimrc",
-			"settings":
-			{
-				"buffer_size": 2600,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "exports",
-			"settings":
-			{
-				"buffer_size": 166,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "profile",
-			"settings":
-			{
-				"buffer_size": 748,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/chris/Applications/bin/virtualenvwrapper.sh",
-			"settings":
-			{
-				"buffer_size": 41384,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -51,7 +23,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 359.0,
+		"height": 400.0,
 		"last_filter": "ins",
 		"selected_items":
 		[
@@ -60,7 +32,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 457.0
 	},
 	"console":
 	{
@@ -81,10 +53,27 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/chris/Source/dotfiles"
+		"/Users/chris/Source/dotfiles",
+		"/Users/chris/Source/dotfiles/config"
 	],
 	"file_history":
 	[
+		"/Users/chris/Applications/bin/lns",
+		"/Users/chris/Applications/bin/ins",
+		"/Users/chris/Applications/bin/lns.pl",
+		"/Users/chris/Source/dotfiles/profile",
+		"/Users/chris/Source/dotfiles/exports.sh",
+		"/Users/chris/Source/dotfiles/aliases.sh",
+		"/Users/chris/Source/dotfiles/dircolors.moonshine",
+		"/Users/chris/Source/dotfiles/git-prompt",
+		"/Users/chris/Source/dotfiles/.gitignore",
+		"/Users/chris/Source/dotfiles/install.sh",
+		"/Users/chris/Downloads/colortest",
+		"/Users/chris/Source/dotfiles/vimrc",
+		"/Users/chris/Source/dotfiles/exports",
+		"/Users/chris/Source/dotfiles/bash_prompt",
+		"/Users/chris/Source/dotfiles/functions",
+		"/Users/chris/Applications/bin/virtualenvwrapper.sh",
 		"/Users/chris/Source/p2p/.gitignore",
 		"/Users/chris/Source/p2p/lendingclub.sublime-project",
 		"/Users/chris/Source/p2p/p2p.sublime-project",
@@ -92,7 +81,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -106,6 +95,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"94",
+			"123",
+			"179"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -123,125 +115,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "vimrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2600,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1315,
-								1315
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 747.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "exports",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "profile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								37,
-								37
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/chris/Applications/bin/virtualenvwrapper.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 41384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1874,
-								1898
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1413.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
