@@ -4,6 +4,7 @@
 
 [alias]
 	co = checkout
+	cob = checkout -b
 	br = branch
 	ci = commit
 	st = status
