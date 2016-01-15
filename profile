@@ -1,4 +1,3 @@
-export PATH=$PATH:~/Applications/bin
 
 for file in ~/.{bash_prompt.sh,exports.sh,aliases.sh,functions.sh,dircolors}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";

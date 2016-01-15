@@ -8,3 +8,6 @@ export PAGER="most"
 export WORKON_HOME=~/Source/.virtualenvs
 export PROJECT_HOME=~/Source
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
+# Use homebrew coreutils by default
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:~/Applications/bin"
