@@ -64,7 +64,7 @@ prompt_git() {
 	fi;
 }
 
-pyv_prompt () {
+pyvirtualenv_info () {
 	if [ -n "$VIRTUAL_ENV" ]; then
         # echo "workon "$'\e[31m'"$( basename $VIRTUAL_ENV )"$'\e[0m'
         echo -e "${1}$( basename $VIRTUAL_ENV )"
@@ -123,7 +123,7 @@ PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
 PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\w"; # working directory
-PS1+="\$(pyv_prompt \"${white} workon ${red}\")"; # Python virtualenv details
+PS1+="\$(pyvirtualenv_info \"${white} workon ${red}\")"; # Python virtualenv details
 PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\n";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
