@@ -115,8 +115,21 @@ else
 	hostStyle="${yellow}";
 fi;
 
+last_exit_status() {
+	local EXIT="$?"
+	# readonly local LAST_GOOD='\u2705'
+	readonly local LAST_BAD='\u274c'
+	# readonly local SKULL='\u2620'
+
+	if [ $EXIT != 0 ]; then
+
+		echo -e "\n$LAST_BAD $LAST_BAD $LAST_BAD  ($EXIT)"
+	fi
+}
+
 # Set the terminal title to the current working directory.
-PS1="\[\033]0;\w\007\]";
+PS1="\$(last_exit_status) ";
+PS1+="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
@@ -126,6 +139,7 @@ PS1+="\[${green}\]\w"; # working directory
 PS1+="\$(pyvirtualenv_info \"${white} workon ${red}\")"; # Python virtualenv details
 PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\n";
+# PS1+="\$(last_exit_status) ";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
