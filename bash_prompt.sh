@@ -117,13 +117,10 @@ fi;
 
 last_exit_status() {
 	local EXIT="$?"
-	# readonly local LAST_GOOD='\u2705'
-	readonly local LAST_BAD='\u274c'
-	# readonly local SKULL='\u2620'
+	readonly local RED_X='\u274c'
 
 	if [ $EXIT != 0 ]; then
-
-		echo -e "\n$LAST_BAD $LAST_BAD $LAST_BAD  ($EXIT)"
+		echo -e "\n$RED_X $RED_X $RED_X  ($EXIT)"
 	fi
 }
 
