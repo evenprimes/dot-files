@@ -86,3 +86,9 @@ function frameworkpython {
         /usr/local/bin/python "$@"
     fi
 }
+
+# Top 10 history commands from:
+# http://www.cyberciti.biz/howto/shell-primer-configuring-your-linux-unix-osx-environment/
+function ht {
+  history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
