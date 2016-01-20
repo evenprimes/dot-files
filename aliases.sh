@@ -1,8 +1,8 @@
 alias grep='grep --color=auto'
 
-alias ll='gls --color=auto -la --group-directories-first'
-alias l.='gls --color=auto -d --group-directories-first .*'
-alias ls='gls -pF --color=auto --group-directories-first'
+alias ll='gls --color=auto -l --almost-all --group-directories-first --classify --human-readable'
+alias l.='gls --color=auto --directory --group-directories-first --classify .*'
+alias ls='gls -p --classify --color=auto --group-directories-first --ignore-backups'
 alias ..='cd ..'
 
 alias gs='git status '
@@ -12,6 +12,8 @@ alias gc='git commit'
 alias gd='git diff'
 alias gca='git commit -a'
 alias glog='git log'
+
+alias c='clear'
 
 alias mv='mv -i'
 alias cp='cp -i'
