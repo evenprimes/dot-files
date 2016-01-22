@@ -11,11 +11,13 @@ main() {
 
 	##########
 	# Update dircolors
-	gdircolors dircolors.moonshine > dircolors
+	echo Updating dircolors...
+	gdircolors --bourne-shell dircolors.moonshine > dircolors
 
 	# move any existing dotfiles in homedir to dotfiles_old directory, then
 	# create symlinks from the homedir to any files in the ~/dotfiles
 	# directory specified in $files
+	echo Updating dot files...
 	for i in $files; do
 		sourceFile=$dir/$i
 		destFile=~/.$i
@@ -25,6 +27,7 @@ main() {
 			ln -sv $sourceFile $destFile
 		fi
 	done
+
 }
 
 main

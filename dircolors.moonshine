@@ -150,6 +150,7 @@ CHR    01;38;5;137 # character device driver
 .rz     00;38;5;61
 .apk    00;38;5;61
 .gem    00;38;5;61
+.pkg    00;38;5;61
 
 # Image formats
 .jpg    00;38;5;220
@@ -223,8 +224,8 @@ CHR    01;38;5;137 # character device driver
 .m4a    00;38;5;208
 
 # Documents/Readables
-.pdf  00;38;5;109
-.PDF  00;38;5;109
+.pdf  00;38;5;111
+.PDF  00;38;5;111
 .html 00;38;5;109
 .HTML 00;38;5;109
 .doc  00;38;5;109
@@ -233,6 +234,12 @@ CHR    01;38;5;137 # character device driver
 .pptx 00;38;5;109
 .odt  00;38;5;109
 .odp  00;38;5;109
+.pages  00;38;5;109
+
+# Plain text
+.txt 00;38;5;255
+.md  00;38;5;255
+.markdown  00;38;5;255
 
 # Source code files
 .pl     00;38;5;179
@@ -255,6 +262,8 @@ CHR    01;38;5;137 # character device driver
 .lua    00;38;5;179
 .vim    00;38;5;179
 .m      00;38;5;179
+.cmd      00;38;5;179
+
 
 # Libraries/Literates/Documentations
 .1      00;38;5;137
@@ -273,14 +282,16 @@ CHR    01;38;5;137 # character device driver
 .cfg      00;38;5;226
 .plist    00;38;5;226
 
-# Plain text
-.txt 00;38;5;255
-.md  00;38;5;255
+# Windows executables
+.exe 00;38;5;160
+.EXE 00;38;5;160
 
 # Other readables
 .xlm   00;38;5;245
 .xls   00;38;5;245
 .xlsx  00;38;5;245
+.xlsb  00;38;5;245
+.XLSB  00;38;5;245
 .csv   00;38;5;245
 .Rds   00;38;5;245
 .RDS   00;38;5;245
