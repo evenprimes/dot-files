@@ -46,6 +46,8 @@ sizeup () {
 	local totalb=0
 	local size output reverse OPT
 	local depth="-maxdepth 4"
+	readonly local STATCMD="/usr/bin/stat"
+
 	OPTIND=1
 	while getopts "hr0123" opt; do
 		case $opt in
@@ -64,7 +66,7 @@ sizeup () {
 	local counter=0
 	while read -r file; do
 		counter=$(( $counter+1 ))
-		size=$(stat -f '%z' "$file")
+		size=$($STATCMD -f '%z' "$file")
 		totalb=$(( $totalb+$size ))
 		>&2 echo -ne $'\E[K\e[1;32m'"${counter}:"$'\e[1;31m'" $file "$'\e[0m'"("$'\e[1;31m'$size$'\e[0m'")"$'\r'
 		# >&2 echo -n "$(__sizeup_humanize $totalb): $file ($size)"
