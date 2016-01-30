@@ -87,6 +87,16 @@ pipupgradeall() {
 		| tr "\n" " " \
 		| xargs pip install -U
 	else
-		echo No Python virtualenv is present, not running pip "${FUNCNAME[0]}"
+		read -p "Are you sure you want to update the SYSTEM PYTHON? [y/n] " yn
+		case $yn in
+			[Yy]* )
+				pip3 list -o \
+				| cut -d " " -f 1 \
+				| tr "\n" " " \
+				| xargs sudo pip3 install -U
+				;;
+			*)
+				;;
+		esac
 	fi
 }
