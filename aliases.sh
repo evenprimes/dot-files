@@ -8,11 +8,8 @@ alias cd..='cd ..'
 
 alias gs='git status '
 alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
 alias gd='git diff'
 alias gca='git commit -a'
-alias glog='git log'
 
 alias c='clear'
 
@@ -21,8 +18,8 @@ alias cp='cp -i'
 alias ln='ln -i'
 alias rm='rm -I --preserve-root --dir'
 
-alias df='df -H'
-alias du='du -ch'
+alias df='df --human-readable --total '
+alias du='du -ch | sort --human-numeric-sort '
 
 alias src='source ~/.profile'
 
