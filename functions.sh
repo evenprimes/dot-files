@@ -100,3 +100,22 @@ pipupgradeall() {
 		esac
 	fi
 }
+
+up() {
+	local var=$1
+	local dir=
+
+	if [[ -z "$var" ]]; then
+		dir=..
+	elif [[ "$var" =~ ^[0-9]+$ ]]; then
+		local i=1
+		while [[ $i -le $var ]]; do
+			dir="$dir../"
+			i=$(($i+1))
+		done
+	else
+		dir="../$var"
+	fi
+
+	cd "$dir"
+}
