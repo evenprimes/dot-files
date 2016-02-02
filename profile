@@ -21,6 +21,8 @@ shopt -q -s extglob
 # Make multi-line commandsline in history
 shopt -q -s cmdhist
 
+shopt -s autocd
+
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 	source "$(brew --prefix)/etc/bash_completion";
