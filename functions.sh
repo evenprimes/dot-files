@@ -117,5 +117,11 @@ up() {
 		dir="../$var"
 	fi
 
-	cd "$dir"
+	builtin cd "$dir"
+}
+
+json() {
+	local ARGS="$@"
+	cat "$ARGS" \
+	| python -m json.tool
 }
