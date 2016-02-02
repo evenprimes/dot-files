@@ -23,6 +23,16 @@ shopt -q -s cmdhist
 
 shopt -s autocd
 
+shopt -s direxpand
+
+shopt -s dirspell
+
+shopt -s globstar
+
+shopt -s gnu_errfmt
+
+shopt -s nullglob
+
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 	source "$(brew --prefix)/etc/bash_completion";
