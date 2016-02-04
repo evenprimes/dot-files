@@ -40,9 +40,9 @@ print_status() {
 	local c1_msg=$1
 	local c2_msg=$2
 
-	readonly local RESET=$(tput sgr0)
-	readonly local C1=$(tput setaf 226)             # color 1: yellow
-	readonly local C2=$(tput bold)$(tput setaf 15)  # color 2: bold white
+	local RESET=$(tput sgr0)
+	local C1=$(tput setaf 226)             # color 1: yellow
+	local C2=$(tput bold)$(tput setaf 15)  # color 2: bold white
 	rulem " $C1$c1_msg $C2$c2_msg$RESET "
 }
 
@@ -50,9 +50,9 @@ print_step() {
 	local c1_msg=$1
 	local c2_msg=$2
 
-	readonly local RESET=$(tput sgr0)
-	readonly local C1=$(tput setaf 178)             # color 1: yellow
-	readonly local C2=$(tput bold)$(tput setaf 15)  # color 2: bold white
+	local RESET=$(tput sgr0)
+	local C1=$(tput setaf 178)             # color 1: yellow
+	local C2=$(tput bold)$(tput setaf 15)  # color 2: bold white
 	local ARROW="$C2\u21e8"
 	echo -e "  $ARROW  $C1$c1_msg $C2$c2_msg$RESET"
 }
@@ -60,7 +60,7 @@ print_step() {
 print_error() {
 	local c1_msg=$1
 
-	readonly local RESET=$(tput sgr0)
-	readonly local C1=$(tput bold)$(tput setaf 196)  # color 1: red
+	local RESET=$(tput sgr0)
+	local C1=$(tput bold)$(tput setaf 196)  # color 1: red
 	echo -e "$C1$c1_msg$RESET"
 }
