@@ -111,7 +111,7 @@ up() {
 		local i=1
 		while [[ $i -le $var ]]; do
 			dir="$dir../"
-			i=$(($i+1))
+			i=$((i+1))
 		done
 	else
 		dir="../$var"
@@ -122,6 +122,5 @@ up() {
 
 json() {
 	local ARGS="$@"
-	cat "$ARGS" \
-	| python -m json.tool
+	python -m json.tool < "$ARGS"
 }
