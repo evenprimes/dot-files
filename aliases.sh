@@ -1,14 +1,15 @@
+#!/usr/local/bin/bash
+
 alias grep='grep --color=auto'
 
 alias ll='gls --color=auto -l --almost-all --group-directories-first --classify --human-readable'
 alias l.='gls --color=auto --directory --group-directories-first --classify .*'
 alias ls='gls -p --classify --color=auto --group-directories-first --ignore-backups'
-# alias ..='cd ..'
-# alias cd..='cd ..'
 
 alias gs='git status '
 alias ga='git add '
 alias gd='git diff'
+alias gc='git commit'
 alias gca='git commit -a'
 
 alias c='clear'
