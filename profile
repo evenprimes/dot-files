@@ -34,7 +34,7 @@ shopt -s autocd
 
 # If set, Bash attempts spelling correction on directory names during word
 # completion if the directory name initially supplied does not exist.
-shopt -s dirspell
+# shopt -s dirspell
 
 # If set, the pattern ‘**’ used in a filename expansion context will match all
 # files and zero or more directories and subdirectories. If the pattern is

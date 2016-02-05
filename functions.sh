@@ -155,3 +155,7 @@ EOT
 fn() {
 	gfind . -iname "*$1*" -print
 }
+
+hex() {
+	printf "%d: 0x%X\n" "$1" "$1"
+}
