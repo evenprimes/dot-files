@@ -124,3 +124,12 @@ json() {
 	local ARGS="$@"
 	python -m json.tool < "$ARGS"
 }
+
+e() {
+	local ARGS="$@"
+	if [[ -z "$ARGS" ]]; then
+		subl .
+	else
+		subl "$@"
+	fi
+}
