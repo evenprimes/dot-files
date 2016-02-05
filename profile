@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/local/bin/bash
+
 for file in ~/.{bash_prompt.sh,exports.sh,aliases.sh,functions.sh,dircolors}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
@@ -57,3 +58,6 @@ fi;
 
 # Setup virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
+
+# Gimme a fortune! (Include offensive quotes.)
+fortune -a

@@ -133,3 +133,21 @@ e() {
 		subl $@
 	fi
 }
+
+# From: https://emson.co.uk/2009/06/18-useful-bash-scripts-for-web-developers/
+# function to change directory to the one set in the last opened finder.
+cdf () {
+   currFolderPath=$( /usr/bin/osascript << EOT
+       tell application "Finder"
+           try
+               set currFolder to (folder of the front window as alias)
+           on error
+               set currFolder to (path to desktop folder as alias)
+           end try
+           POSIX path of currFolder
+       end tell
+EOT
+   )
+   echo "cd to \"$currFolderPath\""
+   builtin cd "$currFolderPath"
+}
