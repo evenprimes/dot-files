@@ -130,6 +130,6 @@ e() {
 	if [[ -z "$ARGS" ]]; then
 		subl .
 	else
-		subl "$@"
+		subl $@
 	fi
 }
