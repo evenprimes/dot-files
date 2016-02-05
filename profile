@@ -29,7 +29,7 @@ shopt -s autocd
 # If set, Bash replaces directory names with the results of word expansion when
 # performing filename completion. This changes the contents of the readline
 # editing buffer. If not set, Bash attempts to preserve what the user typed.
-shopt -s direxpand
+# shopt -s direxpand
 
 # If set, Bash attempts spelling correction on directory names during word
 # completion if the directory name initially supplied does not exist.
