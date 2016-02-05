@@ -87,7 +87,7 @@ pipupgradeall() {
 		| tr "\n" " " \
 		| xargs pip install -U
 	else
-		read -p "Are you sure you want to update the SYSTEM PYTHON? [y/n] " yn
+		read -rN 1 -p "Are you sure you want to update the SYSTEM PYTHON? [y/n] " yn
 		case $yn in
 			[Yy]* )
 				pip3 list -o \
