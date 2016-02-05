@@ -122,7 +122,7 @@ up() {
 
 json() {
 	local ARGS="$@"
-	python -m json.tool < "$ARGS"
+	python3 -m json.tool < "$ARGS" | pygmentize -l js
 }
 
 e() {
