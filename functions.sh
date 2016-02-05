@@ -151,3 +151,7 @@ EOT
    echo "cd to \"$currFolderPath\""
    builtin cd "$currFolderPath"
 }
+
+fn() {
+	gfind . -iname "*$1*" -print
+}
