@@ -1,53 +1,53 @@
 #!/usr/local/bin/bash
 
-for file in ~/.{bash_prompt.sh,exports.sh,aliases.sh,functions.sh,dircolors}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file
+# Prevent file overwrite on stdout redirection
+# Use `>|` to force redirection to an existing file
+set -o noclobber
 
-# Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
+# Update window size after every command
+shopt -s checkwinsize
 
-# Append to the Bash history file, rather than overwriting it
+# Automatically trim long paths in the prompt (requires Bash 4.x)
+PROMPT_DIRTRIM=2
+
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null
+
+## SMARTER TAB-COMPLETION (Readline bindings) ##
+
+# Perform file completion in a case insensitive fashion
+bind "set completion-ignore-case on"
+
+# Treat hyphens and underscores as equivalent
+bind "set completion-map-case on"
+
+# Display matches for ambiguous patterns at first tab press
+bind "set show-all-if-ambiguous on"
+
+## SANE HISTORY DEFAULTS ##
+
 HISTCONTROL=ignoreboth
 HISTIGNORE="ls:pwd:man *:history"
+
+# Append to the history file, don't overwrite it
 shopt -s histappend
 
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell
+# Save multi-line commands as one command
+shopt -s cmdhist
 
-# Turn on the extended pattern matching features
-shopt -q -s extglob
+## BETTER DIRECTORY NAVIGATION ##
 
-# Make multi-line commandsline in history
-shopt -q -s cmdhist
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
 
-# If set, a command name that is the name of a directory is executed as if it
-# were the argument to the cd command. This option is only used by interactive
-# shells.
-shopt -s autocd
-
-# If set, Bash replaces directory names with the results of word expansion when
-# performing filename completion. This changes the contents of the readline
-# editing buffer. If not set, Bash attempts to preserve what the user typed.
-# shopt -s direxpand
-
-# If set, Bash attempts spelling correction on directory names during word
-# completion if the directory name initially supplied does not exist.
-# shopt -s dirspell
-
-# If set, the pattern ‘**’ used in a filename expansion context will match all
-# files and zero or more directories and subdirectories. If the pattern is
-# followed by a ‘/’, only directories and subdirectories match.
-shopt -s globstar
-
-# If set, shell error messages are written in the standard GNU error message
-# format.
-shopt -s gnu_errfmt
-
-# If set, Bash allows filename patterns which match no files to expand to a null
-# string, rather than themselves.
-shopt -s nullglob
+# This defines where cd looks for targets
+# Add the directories you want to have fast access to, separated by colon
+# Ex: CDPATH=".:~:~/projects" will look for targets in the current working directory, in home and in the ~/projects folder
+CDPATH=".:~/Source/:~/"
 
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
@@ -55,6 +55,11 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+for file in ~/.{bash_prompt.sh,exports.sh,aliases.sh,functions.sh,dircolors}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file
 
 # Setup virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh

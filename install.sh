@@ -27,9 +27,9 @@ main() {
 		sourceFile=$dir/$i
 		destFile=~/.$i
 
-		if [ ! -L $destFile ]; then
+		if [ ! -L "$destFile" ]; then
 			print_step "Creating symlink to $i in home directory."
-			ln -sv $sourceFile $destFile
+			ln -sv "$sourceFile" "$destFile"
 		fi
 	done
 

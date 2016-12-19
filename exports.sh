@@ -13,4 +13,4 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Use homebrew coreutils by default
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:~/Applications/bin"
-CDPATH=".:~/Source/:~/"
+
