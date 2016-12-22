@@ -12,5 +12,5 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # Use homebrew coreutils by default
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:~/Applications/bin"
+export PATH="/usr/local/Homebrew/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH:~/Applications/bin"
 
