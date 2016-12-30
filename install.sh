@@ -9,7 +9,7 @@ main() {
 	########## Variables
 
 	readonly local dir=$(pwd)                     # dotfiles directory
-	readonly local files="aliases.sh bash_prompt.sh dircolors exports.sh functions.sh gitconfig gitignore_global profile vimrc bashlib.sh"
+	readonly local files="aliases.sh bash_prompt.sh dircolors exports.sh functions.sh gitconfig gitignore_global profile bashlib.sh"
 	local i=
 	local sourceFile=
 	local destFile=

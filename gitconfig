@@ -1,6 +1,6 @@
 [user]
 	name = Chris Cioffi
-	email = chris@evenprimes.com
+	email = chris@localhost
 
 [alias]
 	co = checkout
