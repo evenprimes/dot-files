@@ -6,8 +6,8 @@ alias ll='gls --color=auto -l --almost-all --group-directories-first --classify 
 alias l.='gls --color=auto --directory --group-directories-first --classify .*'
 alias ls='gls -p --classify --color=auto --group-directories-first --ignore-backups'
 
-alias gs='git status '
-alias ga='git add '
+alias gs='git status'
+alias ga='git add -p'
 alias gd='git diff'
 alias gc='git commit'
 alias gca='git commit -a'
